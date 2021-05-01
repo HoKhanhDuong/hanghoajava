@@ -56,6 +56,9 @@ public class main {
 	}
 
 	public static void main(String[] args) {
+
+		ArrayList<HangHoa> list = new ArrayList<HangHoa>();
+		
 		int a;
 		Scanner sc = new Scanner(System.in);
 		do {
