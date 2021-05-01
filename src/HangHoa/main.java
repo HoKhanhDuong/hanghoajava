@@ -4,75 +4,51 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
-	private static void HangThucPham() {
+	private static void HangThucPham(HangThucPham tp) {
 		int a;
 		int count=0;
-		HangThucPham[] tp = new HangThucPham[100];
 
 		Scanner sc = new Scanner(System.in);
-		do {
-		System.out.println("1. Nhập hàng thực phẩm\n"
-				+ "2. Xuất hàng thực phẩm\n"
-				+ "3. Danh sách thực phẩm\n"
-				+ "0. Quay lại\n"
-				+ "Nhập lựa chọn của bạn: "
-				);
-		a = sc.nextInt();
-		
-		switch (a) {
-		case 1:
-			System.out.println("Nhập số lượng hàng thực phẩm bạn muốn nhập vào: ");
-			int b =sc.nextInt();
-			count += b;
-			for(int i =0; i<b; i++) {
-				tp[i] = new HangThucPham();
-				tp[i].nhap();
-			}
-			
-			break;
-		case 2:
-			String maSP;
-			System.out.println("Nhập mã sản phẩm bạn muốn xuất: ");
-			sc.nextLine();
-			maSP = sc.nextLine();
-			for(int i= 0,j = 0; i< count; i++) {
-				if(!tp[i].maSP.equals(maSP) ) {
-					
-				}
-			}
-			break;
-		case 3:
-			for(int i=0; i<count; i++) {
-				System.out.println("------------/---------------/------------"); 
-			    System.out.println(tp[i].toString()); 
-			    System.out.println("------------/---------------/------------"); 
-			}
-			break;
+		tp = new HangThucPham();
+		tp.nhap();
+		System.out.println("------------/---------------/------------"); 
+	    System.out.println(tp.toString()); 
+	    System.out.println("------------/---------------/------------"); 
+	}
+	
+	private static void HangDienTu(HangDienTu dt) {
+		int a;
+		int count=0;
 
-		default:
-			break;
-		}
-		}while(a!=0);
+		Scanner sc = new Scanner(System.in);
+		dt = new HangDienTu();
+		dt.nhap();
+		System.out.println("------------/---------------/------------"); 
+	    System.out.println(dt.toString()); 
+	    System.out.println("------------/---------------/------------"); 
 	}
 
 	public static void main(String[] args) {
 		int a;
+		HangThucPham tp = new HangThucPham();
+		HangDienTu dt = new HangDienTu();
 		Scanner sc = new Scanner(System.in);
 		do {
-		System.out.println("1. Toàn bộ hàng hóa\n"
-				+ "2. Hàng thực phẩm\n"
-				+ "3. Hàng điện tử\n"
-				+ "0. Thoát\n"
+		System.out.println("1. Nhập, xuất một hàng thực phẩm (bao gồm giá)\n"
+				+ "2. Nhập, xuất một hàng điện tử (bao gồm giá)\n"
+				+ "3. Xây dựng lớp CỬA HÀNG để quản lý danh sách các sản phẩm\n"
+				+ "4. Nhập xuất danh sách các sản phẩm\n"
+				+ "5. Tìm sản phẩm có giá thấp nhất trong danh sách \n"
 				+ "Nhập lựa chọn của bạn: "
 				);
 		a = sc.nextInt();
 		
 		switch (a) {
 		case 1:
-			
+			HangThucPham(tp);
 			break;
 		case 2:
-			HangThucPham();
+			HangDienTu(dt);
 			break;
 		case 3:
 	

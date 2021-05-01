@@ -26,7 +26,7 @@ public class HangDienTu extends HangHoa{
 	public String toString() 
 	  {
 	  return "\nMã sản phẩm: " + this.maSP + "\nGiá: " + this.gia 
-	        + "\nHạn sử dụng: " + this.namSX + "\nChi phí tiêu hao: " +this.chietKhau; 
+	        + "\nHạn sử dụng: " + this.namSX + "\nChi phí tiêu hao: " +this.chietKhau +"\nGiá bán: "+this.giaBan(); 
 	  } 
 
 }
