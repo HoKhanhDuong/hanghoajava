@@ -27,7 +27,7 @@ public class HangThucPham extends HangHoa{
 	public String toString() 
 	  {
 	  return "\nMã sản phẩm: " + this.maSP + "\nGiá: " + this.gia 
-	        + "\nHạn sử dụng: " + this.hanSD + "\nChi phí tiêu hao: " +this.chiPhi; 
+	        + "\nHạn sử dụng: " + this.hanSD + "\nChi phí tiêu hao: " +this.chiPhi + "\nGiá bán: "+ this.giaBan(); 
 	  } 
 	
 }
